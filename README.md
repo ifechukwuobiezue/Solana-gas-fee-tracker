@@ -1,6 +1,6 @@
 # Solana Gas Tracker
 
-This project tracks Solana gas prices and uses a webhook implemented in **Express.js**. The backend is exposed through **ngrok**, and the frontend is built with **React**.
+This project tracks Solana gas prices and uses a webhook implemented in **Express.js** to recieve transaction data received from the QuickNode stream. The backend is exposed through **ngrok**, and the frontend is built with **React**.
 
 ## Prerequisites
 
@@ -8,6 +8,7 @@ Before you start, ensure you have the following installed:
 
 - **Node.js** (and npm) - [Download Node.js](https://nodejs.org/)
 - **ngrok** - [ngrok account](https://ngrok.com/) (for exposing the local backend to the internet)
+- **QuickNode** - [ngrok account](https://www.quicknode.com/) (for accessing the Solana transaction stream and creating an API key)
 
 ## Installation
 
@@ -38,7 +39,8 @@ npm install
 ```
 
 ### 3. Set Up the Backend
-The backend is powered by Express.js and receives webhooks. You also need ngrok to expose the server to the internet for testing purposes.
+The backend is powered by Express.js and receives webhooks from webhook. 
+So go to your quicknode dashbaord and create stream, the stream destination will be your express webhook route.
 
 Start the Express server:
 
