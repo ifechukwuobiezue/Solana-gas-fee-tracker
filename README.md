@@ -83,3 +83,6 @@ Backend: Your backend should be running locally on http://localhost:3000 and wil
 ### 7. Test Webhook Integration
 Ensure that the webhook functionality is working by sending data from external services to the ngrok URL you generated earlier (e.g., http://xyz.ngrok.io). Your backend will receive and process the data, and the frontend will update accordingly.
 
+![Screenshot 2024-12-29 204906](https://github.com/user-attachments/assets/b3158a9d-0229-410c-bf25-cd89760f6dcd)
+
+
