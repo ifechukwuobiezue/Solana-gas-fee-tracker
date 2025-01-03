@@ -2,14 +2,19 @@
 
 This project tracks Solana gas prices and uses a webhook implemented in **Express.js** to recieve transaction data received from the QuickNode stream. The backend is exposed through **ngrok**, and the frontend is built with **React**.
 
-Here is a Live Demo: https://solana-gas-fee-tracker-gasoline.vercel.app/
-
 QuickNode Streams provides real-time, low-latency blockchain data access via WebSockets, allowing developers to subscribe to specific events and receive updates without repetitive polling.
 
 QuickNode Functions offer serverless, on-demand code execution for tasks like smart contract interactions and custom business logic, streamlining development and reducing resource usage.
 
 
-## Prerequisites
+## Setup 
+Here is a Live Demo: https://solana-gas-fee-tracker-gasoline.vercel.app/
+
+Currently still updating the live demo🚀.
+
+To setup the project locally, heres what you need to do.
+
+### Prerequisites
 
 Before you start, ensure you have the following installed:
 
@@ -60,7 +65,7 @@ In another terminal, start ngrok to expose the backend server:
 ```bash
 ngrok http 3000
 ```
-Assumpion your backend is running on port 3000.
+Assuming your backend is running on port 3000.
 This will generate a public URL (e.g., http://xyz.ngrok.io). Use this URL to expose your webhook to external services.
 
 #### 4. Install Frontend Dependencies
