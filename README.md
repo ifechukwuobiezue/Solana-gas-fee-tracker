@@ -13,9 +13,9 @@ QuickNode Functions offer serverless, on-demand code execution for tasks like sm
 
 Before you start, ensure you have the following installed:
 
-- **Node.js** (and npm) - [Download Node.js](https://nodejs.org/)
+- **Node.js** (which comes bundled with npm) - [Download Node.js](https://nodejs.org/)
 - **ngrok** - [ngrok account](https://ngrok.com/) (for exposing the local backend to the internet)
-- **QuickNode** - [ngrok account](https://www.quicknode.com/) (for accessing the Solana transaction stream and creating an API key)
+- **QuickNode** - [Quicknode account](https://www.quicknode.com/) (for accessing the Solana transaction stream and creating an API key)
 
 ## Installation
 
