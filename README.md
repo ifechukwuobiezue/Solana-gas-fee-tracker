@@ -3,11 +3,11 @@
 This project tracks Solana gas prices and uses a webhook implemented in **Express.js** to recieve transaction data received from the QuickNode stream. The backend is exposed through **ngrok**, and the frontend is built with **React**.
 
 ## What is QuickNode Streams/Functions?
-[https://www.quicknode.com/streams](QuickNode Streams) provides real-time, low-latency blockchain data access via WebSockets, allowing developers to subscribe to specific events and receive updates without repetitive polling.
+[QuickNode Streams](https://www.quicknode.com/streams) provides real-time, low-latency blockchain data access via WebSockets, allowing developers to subscribe to specific events and receive updates without repetitive polling.
 
-[https://www.quicknode.com/functions](QuickNode Functions) offer serverless, on-demand code execution for tasks like smart contract interactions and custom business logic, streamlining development and reducing resource usage.
+[QuickNode Functions](https://www.quicknode.com/functions) offer serverless, on-demand code execution for tasks like smart contract interactions and custom business logic, streamlining development and reducing resource usage.
 
-As mentioned in my tweet: <blockquote> Yes, I know Solana gas fees are relatively low, but as traders, we always want to maximize profit. 💸
+As mentioned in my [tweet](https://x.com/CeedoTech/status/1873493972435468467): <blockquote> Yes, I know Solana gas fees are relatively low, but as traders, we always want to maximize profit. 💸
 This project will not only keep you updated on gas fees and transactions but also show you how to utilize QuickNode to create such tools for your preferred blockchain! 🔗 </blockquote>
 
 So here is a Live Demo: https://solana-gas-fee-tracker-gasoline.vercel.app/ to view the app, but to setup the app locally follow this step:
@@ -50,7 +50,7 @@ npm install
 
 ### 3. Set Up the Backend
 The backend is powered by Express.js and receives webhooks from webhook. 
-So go to [https://dashboard.quicknode.com/streams/](QuickNode Streams Dashboard) and create stream, the stream destination will be your express webhook route.
+So go to [QuickNode Streams Dashboard](https://dashboard.quicknode.com/streams/) and create stream, the stream destination will be your express webhook route.
 
 In this project, I created a stream on the Solana Mainnet , applied for dataset as blocks, and applied the stream filter code found in the root directory of this repository.
 
