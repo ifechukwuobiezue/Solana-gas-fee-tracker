@@ -2,19 +2,17 @@
 
 This project tracks Solana gas prices and uses a webhook implemented in **Express.js** to recieve transaction data received from the QuickNode stream. The backend is exposed through **ngrok**, and the frontend is built with **React**.
 
-QuickNode Streams provides real-time, low-latency blockchain data access via WebSockets, allowing developers to subscribe to specific events and receive updates without repetitive polling.
+## What is QuickNode Streams/Functions?
+[https://www.quicknode.com/streams](QuickNode Streams) provides real-time, low-latency blockchain data access via WebSockets, allowing developers to subscribe to specific events and receive updates without repetitive polling.
 
-QuickNode Functions offer serverless, on-demand code execution for tasks like smart contract interactions and custom business logic, streamlining development and reducing resource usage.
+[https://www.quicknode.com/functions](QuickNode Functions) offer serverless, on-demand code execution for tasks like smart contract interactions and custom business logic, streamlining development and reducing resource usage.
 
+As mentioned in my tweet: <blockquote> Yes, I know Solana gas fees are relatively low, but as traders, we always want to maximize profit. 💸
+This project will not only keep you updated on gas fees and transactions but also show you how to utilize QuickNode to create such tools for your preferred blockchain! 🔗 </blockquote>
 
-## Setup 
-Here is a Live Demo: https://solana-gas-fee-tracker-gasoline.vercel.app/
+So here is a Live Demo: https://solana-gas-fee-tracker-gasoline.vercel.app/ to view the app, but to setup the app locally follow this step:
 
-Currently still updating the live demo🚀.
-
-To setup the project locally, heres what you need to do.
-
-### Prerequisites
+## Prerequisites
 
 Before you start, ensure you have the following installed:
 
@@ -52,12 +50,15 @@ npm install
 
 ### 3. Set Up the Backend
 The backend is powered by Express.js and receives webhooks from webhook. 
-So go to your quicknode dashbaord and create stream, the stream destination will be your express webhook route.
+So go to [https://dashboard.quicknode.com/streams/](QuickNode Streams Dashboard) and create stream, the stream destination will be your express webhook route.
 
-Start the Express server:
+In this project, I created a stream on the Solana Mainnet , applied for dataset as blocks, and applied the stream filter code found in the root directory of this repository.
+
+
+Start the Express server, using Native file watch:
 
 ```bash
-npm start
+node --watch server.js
 ```
 
 In another terminal, start ngrok to expose the backend server:
@@ -66,7 +67,7 @@ In another terminal, start ngrok to expose the backend server:
 ngrok http 3000
 ```
 Assuming your backend is running on port 3000.
-This will generate a public URL (e.g., http://xyz.ngrok.io). Use this URL to expose your webhook to external services.
+This will generate a public URL (e.g., http://xyz.ngrok.io/webhook). Use this URL as your stream destination.
 
 #### 4. Install Frontend Dependencies
 Navigate to the frontend directory:
@@ -88,14 +89,14 @@ Start the React development server:
 ```bash
 npm start
 ```
-This will open the React app in your browser (usually at http://localhost:3000).
+This will open the React app in your browser (since your backend is running on 3000, it will startup at http://localhost:3001).
 
 ### 6. Access the App
-Frontend: Open your browser and navigate to http://localhost:3000 to view the React app.
+Frontend: Open your browser and navigate to http://localhost:3001 to view the React app.
 Backend: Your backend should be running locally on http://localhost:3000 and will be exposed via ngrok for webhook testing.
 
 ### 7. Test Webhook Integration
-Ensure that the webhook functionality is working by sending data from external services to the ngrok URL you generated earlier (e.g., http://xyz.ngrok.io). Your backend will receive and process the data, and the frontend will update accordingly.
+Ensure that the webhook functionality is working by sending data from Quicknode to the ngrok URL you generated earlier (e.g., http://xyz.ngrok.io). Your backend will receive and process the data at the `/transaction` route, and the frontend will update accordingly.
 
 ![Screenshot 2024-12-29 204906](https://github.com/user-attachments/assets/b3158a9d-0229-410c-bf25-cd89760f6dcd)
 
