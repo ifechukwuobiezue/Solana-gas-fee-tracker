@@ -10,7 +10,7 @@ const TransactionTable = () => {
   useEffect(() => {
     const fetchTransactions = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/transactions");
+        const response = await axios.get("https://solana-gas-fee-tracker.onrender.com/transactions");
         console.log("Full API Response:", response.data);
 
         // Flatten the nested arrays to get all transactions
