@@ -2,16 +2,6 @@
 
 This project tracks Solana gas prices and uses a webhook implemented in **Express.js** to recieve transaction data received from the QuickNode stream. The backend is exposed through **ngrok**, and the frontend is built with **React**.
 
-> 🔗 Useful links  
-> [https://t.co/8YoaU2QqlS](https://t.co/8YoaU2QqlS)  
-> [https://t.co/kIUycqkoRc](https://t.co/kIUycqkoRc)  
-> [https://t.co/454lG8a6nU](https://t.co/454lG8a6nU)  
->   
-> Clone the project and test it!  
-> — Ifechukwu Obiezue (@CeedoTech) [December 29, 2024](https://twitter.com/CeedoTech/status/1873493989846081565?ref_src=twsrc%5Etfw)
-
-
-
 QuickNode Streams provides real-time, low-latency blockchain data access via WebSockets, allowing developers to subscribe to specific events and receive updates without repetitive polling.
 
 QuickNode Functions offer serverless, on-demand code execution for tasks like smart contract interactions and custom business logic, streamlining development and reducing resource usage.
